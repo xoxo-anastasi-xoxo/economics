@@ -5,6 +5,7 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -19,7 +20,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Paxport</title>
   </head>
   <body>
     <noscript>
@@ -36,5 +37,29 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script type="text/javascript">
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+
+        $(".parallax img").css({
+            "transform" : "translate(0%, " + st / 40 + "%)"
+        });
+        var t_border = $(".Preview")[0].clientHeight;
+        var b_border = $(".Carousel-images")[0].clientHeight;
+        if (st > t_border && st < b_border) {
+            $(".Carousel-text-wrapper").css({
+                "padding-top" : st - t_border + "px"
+            });
+        } else if (st < t_border) {
+            $(".Carousel-text-wrapper").css({
+                "padding-top" : "0px"
+            });
+        } else if (st > t_border * 2 + b_border) {
+            $(".Carousel-text-wrapper").css({
+                "padding-top" :  b_border - t_border + "px"
+            });
+        }
+    })
+  </script>
   </body>
 </html>

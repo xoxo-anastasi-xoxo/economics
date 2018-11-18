@@ -1,0 +1,57 @@
+.Tarif {
+    height: 100vh;
+    display: flex;
+}
+
+.Tarif-column-left {
+    width: 50%;
+}
+
+.Tarif-image {
+    height: 90vh;
+    margin-top: 30px;
+    margin-left: 95px;
+}
+
+.Tarif-column-right {
+    width: 45%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.Tarif-text-wrapper {
+    color: #333333;
+    width: 80%;
+    height: 50%;
+    font-weight: 300;
+}
+
+.Tarif-text-wrapper h2 {
+    font-size: 4vh;
+    font-weight: 300;
+}
+
+.Tarif-text-wrapper p {
+    font-size: 2vh;
+}
+
+.Tarif-button{
+    font-weight: 400;
+    text-align: center;
+    width: 60%;
+    background: #00a2ff;
+    height: 60px;
+    border-radius: 40px;
+
+    padding: 18px;
+    font-size: 2vh;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    margin: 30px 0;
+    color: white;
+
+    cursor: pointer;
+}

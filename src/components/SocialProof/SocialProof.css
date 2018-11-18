@@ -1,0 +1,34 @@
+.SocialProof {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SocialProofItem {
+    margin: 20px;
+}
+
+
+.SocialProofItem div {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.SocialProofItem img {
+    width: 120px;
+    height: 65px;
+    object-fit: contain;
+    margin: 20px 50px;
+}
+.SocialProofItem h2 {
+    color: #333333;
+    font-size: 4vh;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-weight: 400;
+}
